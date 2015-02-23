@@ -40,7 +40,48 @@ augroup END
   end
 
   category do
-    id 'Force syntax and filetype association (modeline)'
+    id 'The zen of tab settings'
+    entry do
+      notes <<-EOS
+        <a name='//dash_ref/Entry/The zen of tab settings/0'></a>
+      EOS
+    end
+    entry do
+      command ':set tabstop={n}'
+      name 'number of space characters inserted when a tab is pressed'
+    end
+    entry do
+      command ':set shiftwidth={n}'
+      name 'number of space characters inserted for identation'
+    end
+    entry do
+      command ':set expandtab'
+      name 'output spaces instead of an actual tab'
+      notes 'Use Ctrl-V<Tab> to insert an actual tab'
+    end
+    entry do
+      command ':retab'
+      name 'change existing tab characters to match current settings'
+    end
+  end
+
+  category do
+    id 'Set file tabs (modeline)'
+    entry do
+      notes <<-EOS
+Add the following to the top or bottom of a file.
+
+```
+# vim: set tabstop=2 expandtab shiftwidth=2 softtabstop=2
+```
+
+See also <a href='#//dash_ref/Entry/The zen of tab settings/0'>The art of tab settings</a>
+      EOS
+    end
+  end
+
+  category do
+    id 'Set file syntax and filetype (modeline)'
     entry do
       notes <<-EOS
 Add the following to the top or bottom of a file. In this example
