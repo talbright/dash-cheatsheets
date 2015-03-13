@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-for i in *.rb; do
+shopt -s extglob
+
+for i in [^sample]*.rb; do
   cheatset generate $i
 done
