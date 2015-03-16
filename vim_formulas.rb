@@ -4,6 +4,19 @@ cheatsheet do
   keyword 'vimformulas'
 
   category do
+    id 'Search and replace with prompting'
+    entry do
+      notes <<-EOS
+
+```
+:%s/SearchText/ReplaceText/gc
+```
+
+      EOS
+    end
+  end
+
+  category do
     id 'Wrap text at 80 characters (gq)'
     entry do
       command ':set textwidth=80'
@@ -36,6 +49,31 @@ augroup END
 ```
 
       EOS
+    end
+  end
+
+  category do
+    id 'Swapping windows'
+    entry do
+      command 'CTRL-W r'
+      name 'Rotate windows downwards/rightwards'
+    end
+    entry do
+      command 'CTRL-W R'
+      name 'Rotate windows upwards/leftwards'
+    end
+    entry do
+      command 'CTRL-W t, CTRL-W H'
+      name 'Rotate from horizontal to vertical split'
+      notes %q(With only two windows ```CTRL-W t``` is not necessary)
+    end
+    entry do
+      command 'CTRL-W t, CTRL-W K'
+      name 'Rotate from vertial to horizontal split'
+      notes %q(With only two windows ```CTRL-W t``` is not necessary)
+    end
+    entry do
+      notes %q(See also <a href="http://vimdoc.sourceforge.net/htmldoc/windows.html#window-moving">help window-moving</a>)
     end
   end
 

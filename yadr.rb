@@ -23,6 +23,21 @@ EOS
   end
 
   category do
+    id 'Vim - SplitJoin'
+    entry do
+      command 'sj'
+      name 'Split Structure'
+    end
+    entry do
+      command 'sk'
+      name 'Unsplit Structure'
+    end
+    entry do
+      notes %q(See also <a href="https://github.com/AndrewRadev/splitjoin.vim">SplitJoin</a>)
+    end
+  end
+
+  category do
     id 'Vim - CtrlP'
     entry do
       command ',b'
@@ -31,6 +46,10 @@ EOS
     entry do
       command ',t'
       name 'File finder'
+    end
+    entry do
+      command ',tt'
+      name 'Tag finder'
     end
     entry do
       command '<c-t>'
@@ -78,6 +97,14 @@ EOS
     end
     entry do
       notes %q(See also <a href="http://sjl.bitbucket.org/gundo.vim/">Gundo</a>)
+    end
+  end
+
+  category do
+    id 'Vim - Misc'
+    entry do
+      command ',w'
+      name 'Remove trailing whitespace'
     end
   end
 
