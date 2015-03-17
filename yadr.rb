@@ -11,10 +11,12 @@ EOS
     id 'Vim - EasyMotion'
     entry do
       command ',<Esc>'
+      command ',,w'
       name 'Motion forward'
     end
     entry do
       command ',<Shift><Esc>'
+      command ',,b'
       name 'Motion backward'
     end
     entry do
