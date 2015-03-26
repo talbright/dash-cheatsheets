@@ -141,6 +141,9 @@ EOS
         ```
       EOS
     end
+    entry do
+      notes %q(See also <a href="http://github.com/gmarik/Vundle">Vundle</a>)
+    end
   end
 
 end
